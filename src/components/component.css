@@ -10,7 +10,7 @@ body {
     font-family: IBM Plex Mono , monospace;
   }
 
-.titleHeader {
+.titleHeader, h2 {
     text-align: center;
     font-family: IBM Plex Mono , monospace;
     letter-spacing: 1em;
@@ -18,3 +18,10 @@ body {
     padding-top: 100px;
     text-shadow: 0 0 10px rgba(255, 255, 255, .50)
   }
+  
+  .area-missionsList, .area-planetsList, h2 {
+    gap: 16px;
+    margin-bottom: 70px;
+  }  
+  
+ 
