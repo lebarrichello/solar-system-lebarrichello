@@ -24,4 +24,30 @@ body {
     margin-bottom: 70px;
   }  
   
- 
+.area-missionsList {
+    display: grid;
+    grid: gap 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    padding: 30px;
+  }
+
+.mission-card {
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+    width: 360px;
+    text-align: center;
+    padding-top: 15px;
+    font-size: large;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(30px);
+ }
+
+ .mission-card:hover {
+    border: 2px solid rgb(110,64,201);
+    text-shadow: 0 0 10px rgb(110,64,201);
+ }
