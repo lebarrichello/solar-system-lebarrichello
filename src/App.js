@@ -9,9 +9,14 @@ import Estrelas from './components/Estrelas';
 class App extends React.Component {
   render() {
     return (
-     
-        <><Header /><Estrelas /><SolarSystem /><Missions /></>
-      
+
+      <>
+        <Header />
+        <Estrelas />
+        <SolarSystem />
+        <Missions />
+      </>
+
     );
   }
 }
