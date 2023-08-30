@@ -2,10 +2,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
   }
 
 body {
-    background-color: rgb(0, 12, 30);
+    background: #000428;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
     font-family: IBM Plex Mono , monospace;
   }
@@ -13,41 +16,109 @@ body {
 .titleHeader, h2 {
     text-align: center;
     font-family: IBM Plex Mono , monospace;
-    letter-spacing: 1em;
-    font-size: 20px;
+    font-size: 40px;
+    font-weight: bolder;
     padding-top: 100px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, .50)
+    text-shadow: 0 0 10px rgba(252, 237, 27, 0.904)
   }
-  
-  .area-missionsList, .area-planetsList, h2 {
-    gap: 16px;
-    margin-bottom: 70px;
-  }  
-  
+
+h2 {
+  text-shadow: 0 0 10px rgba(252, 252, 252, 0.904)
+  }
+
+.area-planetsList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 50px;
+  gap: 30px 60px;
+}
+
+.planetImage {
+  height: 200px;
+  opacity: 0.5;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  transform: rotate(15deg) scale(1.4);
+  transition: 0.3s ease-in-out;
+  width: 200px;
+}
+
+.planetImage:hover {
+  background: transparent;
+  border-radius: 100px;
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+.area-missionsList, h2 {
+  gap: 30px 50px;
+  margin-bottom: 70px;
+}
+
 .area-missionsList {
-    display: grid;
-    grid: gap 30px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-content: center;
-    justify-items: center;
-    padding: 30px;
-  }
+  display: grid;
+  grid: gap 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  justify-items: center;
+  padding: 30px;
+}
+
+/* .mission-card {
+  align-items: flex-start;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  height: 130px;
+  justify-content: space-around;
+  padding: 15px;
+  width: 360px;
+} */
+
+.cards_container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  margin: 1rem;
+}
 
 .mission-card {
-    display: flex;
-    flex-direction: column;
-    height: 130px;
-    width: 360px;
-    text-align: center;
-    padding-top: 15px;
-    font-size: large;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(30px);
- }
+  align-items: center;
+  backdrop-filter: blur(3px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  height: 145px;
+  justify-content: space-evenly;
+  overflow: hidden;
+  padding: 15px;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  width: 350px;
+}
 
- .mission-card:hover {
-    border: 2px solid rgb(110,64,201);
-    text-shadow: 0 0 10px rgb(110,64,201);
- }
+.mission-card:hover {
+  border: 2px solid #6e40c9;
+  text-shadow: 0 0 10px #6e40c9;
+}
+
+.icons_container, .infos_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.icon {
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+.infos {
+  font-size: 15px;
+}
