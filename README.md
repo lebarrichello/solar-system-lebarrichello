@@ -2,6 +2,9 @@
 
 Projeto desenvolvido no módulo de Front-End do curso de desenvolvimento web da Trybe
 
+[Gravação de tela Projeto Solar System.webm](https://github.com/lebarrichello/solar-system-lebarrichello/assets/42211040/b0be3846-0477-4e37-b432-0585c16fb3f1)
+
+
 <p>Acesse o projeto em produção <a href="https://solar-system-lebarrichello-git-main-lebarrichello.vercel.app/" target="_blank">clicando aqui</a></p>
 
 ## 🎯 Objetivo
